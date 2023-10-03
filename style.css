@@ -1,0 +1,96 @@
+body,html
+{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+
+}
+body
+{
+    background-color: skyblue;
+}
+#startBox
+{
+    text-align: center;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+}
+#startButton
+{
+    background-color: violet;
+    margin: auto;
+    padding: 20px;
+    width: 20%;
+
+}
+#divGra
+{
+    width: 100%;
+    height: 100%;
+}
+.rzadPierwszy
+{
+    position: absolute;
+    border: 1px solid black;
+    margin: 4px;
+    top: 0%;
+    width: calc(20% - 10px);
+    height: calc(30% - 10px);
+}
+.rzadDrugi
+{
+    position: absolute;
+    border: 1px solid black;
+    margin: 4px;
+    top: 30%;
+    width: calc(20% - 10px);
+    height: calc(30% - 10px);
+}
+.rzadTrzeci
+{
+    position: absolute;
+    border: 1px solid black;
+    margin: 4px;
+    top: 60%;
+    width: calc(20% - 10px);
+    height: calc(30% - 10px);
+}
+
+.kolumna1
+{
+    left: calc(0%)
+}
+.kolumna2
+{
+    left: calc(20%)
+}
+.kolumna3
+{
+    left: calc(40%)
+}
+.kolumna4
+{
+    left: calc(60%)
+}
+.kolumna5
+{
+    left: calc(80%)
+}
+.hideForever
+{
+    display: none;
+}
+.kartkaKategori
+{
+    margin: 10px;
+    width: calc(20% - 20px);
+    height: calc(30% - 20px);
+    position: absolute;
+
+}
