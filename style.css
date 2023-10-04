@@ -20,7 +20,6 @@ body
     top: 5%;
     width: 90%;
     height: 90%;
-    z-index: 2;
 }
 #startButton
 {
@@ -30,26 +29,10 @@ body
     width: 20%;
 
 }
-#divTitles
-{
-    position: absolute;
-    top: calc(15% - 1px);
-    left: calc(15% - 1px);
-    width: 70%;
-    height: 70%;
-    border: 1px solid black;
-    background-color: rgb(243, 186, 186);
-}
 #divGra
 {
     width: 100%;
     height: 100%;
-    z-index: 3;
-}
-#divGra>div
-{
-    background-color: whitesmoke;
-    z-index: 4;
 }
 .rzadPierwszy
 {
@@ -98,16 +81,6 @@ body
 .kolumna5
 {
     left: calc(80%)
-}
-.show
-{
-    display: block;
-    z-index: 5;
-}
-.hide
-{
-    display: none;
-    z-index: 1;
 }
 .hideForever
 {
