@@ -5,11 +5,13 @@ body,html
     width: 100%;
     height: 100%;
     font-family: sans-serif;
-
+    user-select: none;
+    color:rgb(20,20,20);
+    font-size: calc(1vw + 1vh);
 }
 body
 {
-    background-color: skyblue;
+    background-color: rgb(123, 187, 212);
 }
 #startBox
 {
@@ -21,6 +23,7 @@ body
     width: 90%;
     height: 90%;
     z-index: 2;
+    border-radius: 20px;
 }
 #startButton
 {
@@ -28,7 +31,11 @@ body
     margin: auto;
     padding: 20px;
     width: 20%;
-
+    border-radius: 20px;
+}
+#startButton:hover
+{
+    background-color: rgb(220, 110, 215);
 }
 #divTitles
 {
@@ -37,8 +44,13 @@ body
     left: calc(15% - 1px);
     width: 70%;
     height: 70%;
-    border: 1px solid black;
+    border: 5px solid black;
     background-color: rgb(243, 186, 186);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(2vw + 2vh);
 }
 #divGra
 {
@@ -50,33 +62,34 @@ body
 {
     background-color: whitesmoke;
     z-index: 4;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: absolute;
+    border: 1px solid black;
+    margin: 4px;
+    width: calc(20% - 30px);
+    height: calc(30% - 30px);
+}
+#divGra>div:hover
+{
+    background-color: rgb(230, 230, 230);
 }
 .rzadPierwszy
 {
-    position: absolute;
-    border: 1px solid black;
-    margin: 4px;
     top: 0%;
-    width: calc(20% - 10px);
-    height: calc(30% - 10px);
 }
 .rzadDrugi
 {
-    position: absolute;
-    border: 1px solid black;
-    margin: 4px;
     top: 30%;
-    width: calc(20% - 10px);
-    height: calc(30% - 10px);
 }
 .rzadTrzeci
 {
-    position: absolute;
-    border: 1px solid black;
-    margin: 4px;
     top: 60%;
-    width: calc(20% - 10px);
-    height: calc(30% - 10px);
 }
 
 .kolumna1
@@ -106,12 +119,12 @@ body
 }
 .hide
 {
-    display: none;
+    display: none !important;
     z-index: 1;
 }
 .hideForever
 {
-    display: none;
+    display: none !important;
 }
 .kartkaKategori
 {
