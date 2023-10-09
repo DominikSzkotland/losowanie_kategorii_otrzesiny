@@ -101,39 +101,18 @@ function start()
 	{
 		divGraKafelki[i].classList.remove("hide");
 		divGraKafelki[i].classList.add("show");
-		divGraKafelki[i].textContent = tablica_kategorii_i_piosenek[0].Kategoria;
-        divGraKafelki[i].setAttribute("data-title",tablica_kategorii_i_piosenek[0].Piosenka)
+		if(tablica_kategorii_i_piosenek.length <= 0)
+    	{
+        	divGraKafelki[i].textContent = "Nie ma więcej kategorii!";
+			divGraKafelki[i].setAttribute("data-title","");
+    	}
+		else
+		{
+			divGraKafelki[i].textContent = tablica_kategorii_i_piosenek[0].Kategoria;
+        	divGraKafelki[i].setAttribute("data-title",tablica_kategorii_i_piosenek[0].Piosenka)
+		}
 		tablica_kategorii_i_piosenek.shift()
 	}
-    /*for(let i = 0; i < iloscElementow; i++)
-    {
-        const box = document.createElement('div');
-        box.textContent = tablica_kategorii_i_piosenek[i].Kategoria;
-        box.setAttribute("data-title",tablica_kategorii_i_piosenek[i].Piosenka)
-        
-        if(i%4 == 0)
-        {
-            box.classList.add("kolumna2")
-            box.classList.add("rzadDrugi");
-            
-        }
-        if(i%4 == 1)
-        {
-            box.classList.add("kolumna1")
-            box.classList.add("rzadPierwszy");
-        }
-        if(i%4 == 2)
-        {
-            box.classList.add("kolumna2")
-            box.classList.add("rzadPierwszy");
-        }
-        if(i%4 == 3)
-        {
-            box.classList.add("kolumna1")
-            box.classList.add("rzadDrugi");
-        }
-        divGra.appendChild(box);
-    }*/
 }
 
 function zniknij(event) {
