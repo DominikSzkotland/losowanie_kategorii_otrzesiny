@@ -90,13 +90,22 @@ const startBox = document.getElementById("startBox");
 const divGra = document.getElementById("divGra");
 const divTitles = document.getElementById("divTitles");
 const iloscElementow = tablica_kategorii_i_piosenek.length;
+const divGraKafelki = divGra.getElementsByTagName("div")
 
-startButton.addEventListener("click",ClickStart)
-divGra.addEventListener("click", zniknijNaZawsze);
+startButton.addEventListener("click",ClickStart);
+divGra.addEventListener("click", zniknij);
 
 function start()
 {
-    for(let i = 0; i < iloscElementow; i++)
+	for(let i = 0; i < 4; i++)
+	{
+		divGraKafelki[i].classList.remove("hide");
+		divGraKafelki[i].classList.add("show");
+		divGraKafelki[i].textContent = tablica_kategorii_i_piosenek[0].Kategoria;
+        divGraKafelki[i].setAttribute("data-title",tablica_kategorii_i_piosenek[0].Piosenka)
+		tablica_kategorii_i_piosenek.shift()
+	}
+    /*for(let i = 0; i < iloscElementow; i++)
     {
         const box = document.createElement('div');
         box.textContent = tablica_kategorii_i_piosenek[i].Kategoria;
@@ -124,10 +133,10 @@ function start()
             box.classList.add("rzadDrugi");
         }
         divGra.appendChild(box);
-    }
+    }*/
 }
 
-function zniknijNaZawsze(event) {
+function zniknij(event) {
     const target = event.target;
     if (target == divGra || divTitles.classList.contains("show"))
     {
@@ -136,12 +145,26 @@ function zniknijNaZawsze(event) {
     }
     else
     {   
-        divTitles.classList.add("show")
-        divTitles.classList.remove("hide")
-        divTitles.textContent = target.getAttribute("data-title");
-        target.classList.add("hideForever");
+		if(target.getAttribute("data-title") != "")
+		{
+			divTitles.classList.add("show")
+        	divTitles.classList.remove("hide")
+        	divTitles.textContent = target.getAttribute("data-title");
+		}
+		let indexKliknietego = target.id
+		if(tablica_kategorii_i_piosenek.length > 0)
+		{
+			
+			divGraKafelki[indexKliknietego].textContent = tablica_kategorii_i_piosenek[0].Kategoria;
+			divGraKafelki[indexKliknietego].setAttribute("data-title",tablica_kategorii_i_piosenek[0].Piosenka)
+			tablica_kategorii_i_piosenek.shift()
+		}
+		else
+		{
+			divGraKafelki[indexKliknietego].textContent = "Nie ma więcej kategorii!";
+			divGraKafelki[indexKliknietego].setAttribute("data-title","");
+		}
     }
-    console.log(divTitles.classList.contains("show"))
 }
 
 function ClickStart()

@@ -76,6 +76,7 @@ body
     margin: 4px;
     width: calc(50% - 30px);
     height: calc(50% - 30px);
+    font-size: calc(2vw + 2vh);
 }
 #divGra>div:hover
 {
