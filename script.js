@@ -140,7 +140,7 @@ function zniknij(event) {
 		}
 		else
 		{
-			divGraKafelki[indexKliknietego].textContent = "Nie ma więcej kategorii!";
+			divGraKafelki[indexKliknietego].textContent = "";
 			divGraKafelki[indexKliknietego].setAttribute("data-title","");
 		}
     }
